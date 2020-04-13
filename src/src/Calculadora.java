@@ -7,15 +7,16 @@ public class Calculadora {
 		Integer a;
 		Integer b;
 		Integer opcion;
-		Integer resultado;
+		Integer resultado = 0;
 
 		Scanner teclado = new Scanner(System.in);
 		do {
-			System.out.println("Ingrese su operación: \n #1 para sumar \n #2 para restar \n #3 para multiplicar \n #4 para dividir");
+			System.out.println(
+					"Ingrese su operación: \n #1 para sumar \n #2 para restar \n #3 para multiplicar \n #4 para dividir");
 			System.err.println("\n____________________________________");
 
 			opcion = teclado.nextInt();
-		} while(opcion <1 && opcion >4);
+		} while (opcion < 1 && opcion > 4);
 
 		System.out.println("Ingrese el primer numero");
 
@@ -27,19 +28,41 @@ public class Calculadora {
 
 		switch (opcion) {
 		case 1:
-			resultado = a + b;
+			System.out.println(Sumar(a, b));
 			break;
+			
 		case 2:
-			resultado = a - b;
+			System.out.println(Restar(a, b));
 			break;
+			
 		case 3:
-			resultado= a*b;
+			System.out.println(Multiplicarr(a, b));
 			break;
+			
 		default:
-			resultado= a/b;
+			System.out.println(Dividir(a, b));
 			break;
 		}
-		System.out.println("El resultado es " + resultado.toString());
+	}
+
+	public static Integer Sumar(Integer a, Integer b) {
+		Integer resul = a + b;
+		return resul;
+	}
+
+	public static Integer Restar(Integer a, Integer b) {
+		Integer resul = a - b;
+		return resul;
+	}
+
+	public static Integer Multiplicarr(Integer a, Integer b) {
+		Integer resul = a * b;
+		return resul;
+	}
+
+	public static Integer Dividir(Integer a, Integer b) {
+		Integer resul = a / b;
+		return resul;
 	}
 
 }
