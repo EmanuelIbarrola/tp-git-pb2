@@ -27,13 +27,13 @@ public class Calculadora {
 
 		switch (opcion) {
 		case 1:
-			resultado = a + b;
+			resultado = a * b;
 			break;
 		case 2:
 			resultado = a - b;
 			break;
 		case 3:
-			resultado= a*b;
+			resultado= a+b;
 			break;
 		default:
 			resultado= a/b;
